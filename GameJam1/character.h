@@ -10,7 +10,7 @@ public:
 	/// <param name="defense">The amount of damage reduced when attacked.</param>
 	/// <param name="weapon">An item that boosts attack damage.</param>
 	/// <param name="armor">An item that boosts the amount of defense.</param>
-	Character(float health, float damage, float defense, float weaponType, float armorType);
+	Character(float health, float maxHealth, float damage, float defense, float weaponType, float armorType);
 
 	void takeDamage(float damage);
 	void attack(Character enemy);

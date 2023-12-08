@@ -11,9 +11,10 @@ Character::Character()
 	m_armorType = 0;
 }
 
-Character::Character(float health, float damage, float defense, float weaponType, float armorType)
+Character::Character(float health, float maxHealth, float damage, float defense, float weaponType, float armorType)
 {
 	m_health = health;
+	m_maxHealth = maxHealth;
 	m_damage = damage;
 	m_defense = defense;
 	m_weaponType = weaponType;
@@ -60,6 +61,18 @@ Character::Character(float health, float damage, float defense, float weaponType
 	else if (armorType == 4)
 		defense = 0.75f;
 
+}
+
+void Character::printStats()
+{
+	std::cout << "Health: ";
+	std::cout << m_health << std::endl;
+
+	std::cout << "Damage: ";
+	std::cout << m_damage << std::endl;
+
+	std::cout << "Defense: ";
+	std::cout << m_defense << std::endl;
 }
 
 void Character::takeDamage(float damage)
